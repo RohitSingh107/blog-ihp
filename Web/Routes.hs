@@ -10,3 +10,10 @@ instance AutoRoute PostsController
 
 instance AutoRoute CommentsController
 
+-- instance CanRoute PostsController where
+--     parseRoute' = string "/posts" <* endOfInput >> pure PostsAction
+--
+--
+-- instance HasPath PostsController where
+--     pathTo PostsAction = "/posts"
+--     pathTo x = pathTo x

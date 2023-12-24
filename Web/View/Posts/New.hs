@@ -16,7 +16,7 @@ instance View NewView where
                 ]
 
 renderForm :: Post -> Html
-renderForm post = formFor post [hsx|
+renderForm post = formFor' post (pathTo CreatePostAction) [hsx|
     {(textField #title)}
     {(textareaField #body) {helpText = "markdown is supported here"}}
     {submitButton}
